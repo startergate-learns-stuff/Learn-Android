@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android01</string>
+    <string name="imanidiot">저는 아무것도 아닌 병신입니다</string>
+    <string name="printf">printf</string>
 </resources>
