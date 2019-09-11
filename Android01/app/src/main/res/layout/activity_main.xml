@@ -6,21 +6,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="40dp">
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="성별 선택" />
+        android:text="성별 선택"
+        android:textSize="30sp"
+        android:rotation="180" />
     <RadioButton
         android:id="@+id/female"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="여성" />
+        android:text="여성"
+        android:textColor="#34a6ff"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:padding="20dp"
+        android:enabled="false"
+        android:visibility="visible" />
     <RadioButton
         android:id="@+id/male"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="남성" />
+        android:text="남성"
+        android:layout_margin="30dp"
+        android:textSize="30sp"
+        android:padding="20dp" />
 
 </LinearLayout>
