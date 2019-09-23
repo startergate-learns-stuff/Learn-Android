@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!-- 상대 레이아웃
+        1. 부모 레이아웃의 9가지 위치 중 한 곳에 배치
+        2. 특정 위젯을 기준으로 하여 배치
+        2@. 두 개의 다른 위젯에서 기준선을 따올 수 있음
+    -->
+
+    <Button
+        android:id="@+id/bcbb"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="bottom"
+        android:textSize="18sp"
+        android:text="Butt on Cotton Bottom Button"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Whatever."
+        android:layout_alignBaseline="@id/bcbb"
+        android:layout_toLeftOf="@id/bcbb" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Whenever."
+        android:layout_toRightOf="@id/bcbb"
+        android:layout_above="@id/bcbb"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Whoever."
+        android:layout_below="@id/bcbb"
+        android:layout_alignRight="@id/bcbb"/>
+
+    <Button
+        android:id="@+id/asdf"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Wherever."
+        android:layout_above="@id/bcbb"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="However."
+        android:layout_below="@id/bcbb"
+        android:layout_alignRight="@id/bcbb"
+        android:layout_margin="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Fuck."
+        android:layout_alignTop="@id/asdf"
+        android:layout_alignRight="@id/btn"/>
+
+</RelativeLayout>

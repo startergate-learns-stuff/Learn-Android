@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- gravity & layout_gravity 차이
+        gravity - 내부의 무엇인가를 정렬
+        layout_gravity - 본인이 외부의 어디에 정렬 -->
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:text="Button Cotton Bottom Button"/>
+
+</LinearLayout>
