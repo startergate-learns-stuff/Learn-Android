@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="뷰 컨테이너 - 스크롤 뷰 실습"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="#3d415d"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 스크롤 뷰에는 하나의 위젯만 넣을 수 있다.
+             보통 LinearLayout을 넣고 그 안에 위젯들 배치
+             수평 스크롤 뷰의 경우 HorizontalScrollView 사용
+         -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_gravity="left"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_gravity="right"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
