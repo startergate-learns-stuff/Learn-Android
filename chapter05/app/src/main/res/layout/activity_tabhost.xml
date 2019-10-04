@@ -14,41 +14,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <!-- TabWidget, TabContent들 (FrameLayout을 이용함) -->
         <TabWidget
+            android:id="@android:id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@android:id/tabs"></TabWidget>
+            android:layout_height="wrap_content"></TabWidget>
         <!-- 그 아래 공간에는 FrameLayout을 사용하여 레이아웃들 겹쳐서 배치 -->
         <FrameLayout
+            android:id="@android:id/tabcontent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@android:id/tabcontent">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#3d315d"></LinearLayout>
-        </FrameLayout>
+            android:layout_height="match_parent">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@android:id/tabcontent">
             <LinearLayout
+                android:id="@+id/tab1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FA8072"></LinearLayout>
-        </FrameLayout>
+                android:background="#313d51"
+                android:orientation="vertical">
+                <TextClock
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+                <AnalogClock
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@android:id/tabcontent">
             <LinearLayout
+                android:id="@+id/tab2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#778899"></LinearLayout>
+                android:background="#FA8072"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#778899"
+                android:orientation="vertical"></LinearLayout>
         </FrameLayout>
     </LinearLayout>
 </TabHost>
