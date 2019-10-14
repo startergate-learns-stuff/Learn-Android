@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- <item> ... </item> 으로 메뉴 구분
+         각 <item 에 'id'를 부여하여 기능을 연결할 수 있음.
+         'title'이라는 옵션으로 이름 표기 -->
+    <item
+        android:id="@+id/setBackgroundBlack"
+        android:title="검정배경화면">
+    </item>
+    <item
+        android:id="@+id/setBackgroundPurple"
+        android:title="보라배경하면">
+    </item>
+    <item
+        android:title="하위메뉴">
+        <menu>
+            <item
+                android:id="@+id/changeTextView"
+                android:title="텍스트뷰 바꾸기">
+            </item>
+            <item
+                android:id="@+id/changeButton"
+                android:title="버튼 바꾸기">
+            </item>
+        </menu>
+    </item>
+</menu>
