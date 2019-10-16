@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnMenu1"
+        android:title="살려주세요"></item>
+    <item
+        android:id="@+id/btnMenu2"
+        android:title="죽여주세요"></item>
+    <item
+        android:id="@+id/btnMenu3"
+        android:title="히익">
+        <menu>
+            <item
+                android:id="@+id/btnMenu31"
+                android:title="로리콘"></item>
+            <item
+                android:id="@+id/btnMenu32"
+                android:title="쇼타콘"></item>
+            <item
+                android:id="@+id/btnMenu33"
+                android:title="게이"></item>
+        </menu>
+    </item>
+</menu>

@@ -2,9 +2,11 @@ package com.example.chapter07;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,9 +15,14 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-// 메뉴를 포함시키기 위해 Java 코딩에서 필요한 것
+// 실습 1. 메뉴를 포함시키기 위해 Java 코딩에서 필요한 것
 // 1. onCreateOptionsMenu() 메소드 ~ 오버라이딩
 // 2. onOptionsItemSelected() 메소드 ~ 오버라이딩
+
+// 실습 2. 컨텍스트 메뉴 만들기
+// 1. onCreate() 내부에서 registerForContext() 메소드로 위젯 등록
+// 2. onCreateOptionsMenu() 메소드 ~ 오버라이딩
+// 3. onOptionsItemSelected() 메소드 ~ 오버라이딩
 public class MainActivity extends AppCompatActivity {
 
     // 메뉴의 각 기능들을 선택했을 때 연동될 수 있도록...
@@ -31,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         menuLayout = (LinearLayout)findViewById(R.id.baseLayout);
         menuTextView = (TextView)findViewById(R.id.textView);
         menuButton = (Button)findViewById(R.id.button);
+
+        // 실습 2의 1. 버튼을 컨섹스트 메뉴가 작동할 수 있도록 등록
+        registerForContextMenu(menuButton);
     }
 
     @Override
@@ -73,6 +83,46 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return false;
         }
+    }
+
+    // 실습 2의 2. onCreateContextMenu() 메소드 오버라이딩
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        // 자동 완성된 메소드에 아래의 코드 추가
+        MenuInflater contextMInf = getMenuInflater();
+        if (v == menuButton) contextMInf.inflate(R.menu.btn_menu, menu);
+    }
+
+    // 실습 2의 2. onContextItemSelected()
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        super.onContextItemSelected(item);
+        Toast msg;
+        switch (item.getItemId()) {
+            case R.id.btnMenu1:
+                msg = Toast.makeText(MainActivity.this, "살려드렸습니다", Toast.LENGTH_SHORT);
+                msg.show();
+                return true;
+            case R.id.btnMenu2:
+                msg = Toast.makeText(MainActivity.this, "죽여드렸습니다", Toast.LENGTH_SHORT);
+                msg.show();
+                return true;
+            case R.id.btnMenu31:
+                msg = Toast.makeText(MainActivity.this, "흐에", Toast.LENGTH_SHORT);
+                msg.show();
+                return true;
+            case R.id.btnMenu32:
+                msg = Toast.makeText(MainActivity.this, "헤에", Toast.LENGTH_SHORT);
+                msg.show();
+                return true;
+            case R.id.btnMenu33:
+                msg = Toast.makeText(MainActivity.this, "후에", Toast.LENGTH_SHORT);
+                msg.show();
+                return true;
+        }
+        return false;
     }
 }
 
