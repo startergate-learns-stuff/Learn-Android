@@ -66,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:id="@+id/friendStatus"
             android:text="앱프책 팔꿈치받침대 개꿀따리~"/>
     </LinearLayout>
 
